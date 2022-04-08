@@ -39,7 +39,6 @@ const (
 
 // Overload Get
 func (c *Client) Get(url string) (*orig.Response, error) {
-	fmt.Printf("proxies %#v\n", c.proxies)
 	t := &Transport{}
 	for _, p := range c.proxies {
 		switch p.method {
